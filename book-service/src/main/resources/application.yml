@@ -23,7 +23,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/book_service?useTimezone=true&serverTimezone=UTC
     username: root
-    password: root
+    password: 1234
   jackson:
     default-property-inclusion: NON_NULL
     serialization:
@@ -39,4 +39,8 @@ spring:
     url: jdbc:mysql://localhost:3306/
     schemas: book_service
     user: root
-    password: root
+    password: 1234
+springdoc:
+  show-actuator: true
+  api-docs:
+    path: book-service/v3/api-docs

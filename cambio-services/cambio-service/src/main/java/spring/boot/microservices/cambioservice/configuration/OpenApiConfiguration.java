@@ -1,4 +1,4 @@
-package spring.boot.microservices.bookservice.configuration;
+package spring.boot.microservices.cambioservice.configuration;
 
 import org.springframework.context.annotation.Bean;
 
@@ -9,7 +9,7 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.License;
 
 @OpenAPIDefinition(info =
-@Info(title = "Book Service API", version = "v1",description = "Documentation of Book Service API"))
+@Info(title = "Cambio Service API", version = "v1",description = "Documentation of Cambio Service API"))
 public class OpenApiConfiguration {
 
 	@Bean
@@ -17,7 +17,7 @@ public class OpenApiConfiguration {
 		return new OpenAPI()
 				.components(new Components())
 				.info(new io.swagger.v3.oas.models.info.Info()
-						.title("Book Service API")
+						.title("Cambio Service API")
 						.version("v1")
 						.license(new License()
 								.name("Apache 2.0")

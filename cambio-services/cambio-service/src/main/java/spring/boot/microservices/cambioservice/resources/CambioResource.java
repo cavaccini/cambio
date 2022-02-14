@@ -10,9 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import spring.boot.microservices.cambioservice.entities.Cambio;
 import spring.boot.microservices.cambioservice.repositories.CambioRepository;
 
+@Tag(name = "Cambio service API")
 @RequestMapping("cambio-service")
 @RestController
 public class CambioResource {
@@ -23,6 +26,7 @@ public class CambioResource {
 	@Autowired
 	private CambioRepository repository;
 	
+	@Operation(summary = "Get cambio from currency")
 	@GetMapping(value = "/{amount}/{from}/{to}")
 	public Cambio getCambio(@PathVariable("amount") BigDecimal amount, 
 			@PathVariable("from") String from,
